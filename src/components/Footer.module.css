@@ -1,0 +1,155 @@
+.footer {
+  background: var(--off-white-dark);
+  color: var(--charcoal);
+  padding: 5rem 6vw 2.5rem;
+  border-top: 1px solid rgba(44, 44, 44, 0.1);
+}
+
+.inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.4fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(44, 44, 44, 0.1);
+}
+
+/* Brand */
+.wordmark {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: -0.03em;
+  display: block;
+  line-height: 1;
+}
+
+.sub {
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+  margin: 0.4rem 0 0.9rem;
+}
+
+.tagline {
+  font-size: 0.82rem;
+  color: var(--text-body);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+.socials {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.social {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(44, 44, 44, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--charcoal-light);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.social:hover {
+  border-color: var(--rose-gold);
+  color: var(--rose-gold);
+}
+
+/* Columns */
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.colHead {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rose-gold);
+  margin-bottom: 0.25rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.list li,
+.list a {
+  font-size: 0.82rem;
+  color: var(--charcoal-light);
+  transition: color 0.2s;
+  line-height: 1.4;
+}
+
+.list a:hover {
+  color: var(--rose-gold);
+}
+
+.locItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.locCity {
+  font-weight: 500;
+  color: var(--charcoal) !important;
+  font-size: 0.8rem !important;
+}
+
+/* Bottom bar */
+.bottom {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.copy,
+.note {
+  font-size: 0.75rem;
+  color: rgba(44, 44, 44, 0.4);
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer {
+    padding: 4rem 1.25rem 2rem;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}
