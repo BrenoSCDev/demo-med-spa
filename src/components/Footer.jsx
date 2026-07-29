@@ -1,15 +1,10 @@
 import { Globe, Mail, Phone } from 'lucide-react';
 import { useLang } from '../contexts/LanguageContext';
 
-const locations = [
-  { city: 'Chicago', address: '840 N Michigan Ave, Suite 1200', state: 'IL 60611' },
-  { city: 'New York', address: '155 E 55th Street, Suite 800', state: 'NY 10022' },
-  { city: 'Miami', address: '1111 Brickell Ave, Suite 2100', state: 'FL 33131' },
-];
-
 export default function Footer() {
   const { t } = useLang();
   const f = t.footer;
+  const locations = t.locations.list;
 
   return (
     <footer className="bg-[var(--off-white-dark)] px-[6vw] pt-20 pb-10">
@@ -78,8 +73,8 @@ export default function Footer() {
               {locations.map((loc) => (
                 <div key={loc.city}>
                   <p className="text-[0.8rem] font-medium text-[var(--charcoal)] mb-0.5">{loc.city}</p>
-                  <p className="text-[0.8rem] text-[var(--charcoal-light)] leading-snug">{loc.address}</p>
-                  <p className="text-[0.8rem] text-[var(--charcoal-light)]">{loc.state}</p>
+                  <p className="text-[0.8rem] text-[var(--charcoal-light)] leading-snug">{loc.line1}</p>
+                  <p className="text-[0.8rem] text-[var(--charcoal-light)]">{loc.line2}</p>
                 </div>
               ))}
             </div>

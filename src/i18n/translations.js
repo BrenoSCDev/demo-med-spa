@@ -182,11 +182,24 @@ export const translations = {
       copyright: 'All rights reserved.',
       hours: 'By appointment only · Mon – Sat, 8am – 7pm',
     },
+    // The first entry is the flagship clinic — it drives the contact card and
+    // the embedded map next to the appointment form.
+    locations: {
+      list: [
+        { city: 'Chicago',   line1: '840 N Michigan Ave, Suite 1200',  line2: 'Chicago, IL 60611' },
+        { city: 'New York',  line1: '155 E 55th Street, Suite 800',    line2: 'New York, NY 10022' },
+        { city: 'Miami',     line1: '1111 Brickell Ave, Suite 2100',   line2: 'Miami, FL 33131' },
+      ],
+      map: {
+        title: 'Aura Aesthetics Chicago location',
+        src: 'https://www.openstreetmap.org/export/embed.html?bbox=-87.6400%2C41.8900%2C-87.6100%2C41.9100&layer=mapnik&marker=41.9018%2C-87.6237',
+      },
+    },
   },
 
   pt: {
     hero: {
-      eyebrow: 'Chicago · Nova Iorque · Miami',
+      eyebrow: 'São Paulo · Rio de Janeiro · Belo Horizonte',
       titleLine1: 'Elevar.',
       titleLine2: 'Restaurar.',
       titleLine3: 'Irradiar.',
@@ -323,7 +336,7 @@ export const translations = {
       fields: {
         name: 'Nome Completo',       namePlaceholder: 'Ana Silva',
         email: 'Email',              emailPlaceholder: 'ana@exemplo.com',
-        phone: 'Telefone',           phonePlaceholder: '+351 912 000 000',
+        phone: 'Telefone',           phonePlaceholder: '+55 (11) 90000-0000',
         treatment: 'Tratamento de Interesse',
         treatmentDefault: 'Selecione um tratamento',
         date: 'Data Preferida',
@@ -365,6 +378,17 @@ export const translations = {
       locationsLabel: 'Localizações',
       copyright: 'Todos os direitos reservados.',
       hours: 'Apenas com marcação · Seg – Sáb, 8h – 19h',
+    },
+    locations: {
+      list: [
+        { city: 'São Paulo',      line1: 'Rua Oscar Freire, 725 — Conj. 42',        line2: 'Jardins, São Paulo — SP, 01426-003' },
+        { city: 'Rio de Janeiro', line1: 'Av. Ataulfo de Paiva, 1120 — Sala 803',   line2: 'Leblon, Rio de Janeiro — RJ, 22440-035' },
+        { city: 'Belo Horizonte', line1: 'Rua Antônio de Albuquerque, 887 — Sala 1500', line2: 'Savassi, Belo Horizonte — MG, 30112-010' },
+      ],
+      map: {
+        title: 'Localização da Aura Aesthetics em São Paulo',
+        src: 'https://www.openstreetmap.org/export/embed.html?bbox=-46.6828%2C-23.5743%2C-46.6528%2C-23.5543&layer=mapnik&marker=-23.5643%2C-46.6678',
+      },
     },
   },
 };

@@ -173,8 +173,9 @@ export default function AppointmentForm() {
         <div className="flex flex-col gap-6 sticky top-10 max-[960px]:static">
           <div className="rounded-[1.5rem] overflow-hidden border border-[rgba(44,44,44,0.1)] shadow-[0_8px_40px_rgba(44,44,44,0.08)]" style={{ height: '420px' }}>
             <iframe
-              title="Aura Aesthetics Chicago location"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-87.6400%2C41.8900%2C-87.6100%2C41.9100&layer=mapnik&marker=41.9018%2C-87.6237"
+              key={t.locations.map.src}
+              title={t.locations.map.title}
+              src={t.locations.map.src}
               width="100%"
               height="100%"
               style={{ border: 'none', filter: 'saturate(0.45) sepia(0.15) brightness(1.06)', display: 'block' }}
@@ -192,8 +193,8 @@ export default function AppointmentForm() {
               </span>
               <div className="flex flex-col gap-[0.2rem]">
                 <span className="text-[0.7rem] font-medium tracking-[0.1em] uppercase text-[var(--rose-gold)]">{f.address}</span>
-                <span className="text-[0.85rem] text-[var(--text-body)] leading-[1.6]">840 N Michigan Ave, Suite 1200</span>
-                <span className="text-[0.85rem] text-[var(--text-body)]">Chicago, IL 60611</span>
+                <span className="text-[0.85rem] text-[var(--text-body)] leading-[1.6]">{t.locations.list[0].line1}</span>
+                <span className="text-[0.85rem] text-[var(--text-body)]">{t.locations.list[0].line2}</span>
               </div>
             </div>
             <div className="flex items-start gap-4 p-6">

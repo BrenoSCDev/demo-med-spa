@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { useLang } from '../contexts/LanguageContext';
-
-const LANGS = ['en', 'pt'];
+import { SUPPORTED_LANGS, useLang } from '../contexts/LanguageContext';
 
 export default function LanguagePicker() {
-  const { lang, setLang } = useLang();
+  const { lang, setLang, isLangPinned } = useLang();
+
+  if (isLangPinned) return null;
 
   return (
     <div
@@ -12,7 +12,7 @@ export default function LanguagePicker() {
       role="group"
       aria-label="Language selector"
     >
-      {LANGS.map((code) => {
+      {SUPPORTED_LANGS.map((code) => {
         const active = lang === code;
         return (
           <button
